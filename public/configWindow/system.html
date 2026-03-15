@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <title>Voices of the Court</title>
+    <link rel="stylesheet" href="config.css" />
+    
+  </head>
+  <body>
+    <div class="navbar">
+      <ul>
+        <li><a href="connection.html">Connection</a></li>
+        <li><a href="actions.html">Actions</a></li>
+        <li><a href="summarization.html">Summarization</a></li>
+        <li><a href="prompts.html">Prompts</a></li>
+        <li><a href="settings.html">Settings</a></li>
+        <li class="active"><a href="system.html">System</a></li>
+      </ul> 
+    </div>
+
+    <div class="container" id="container">
+
+      <div class="row">
+        <div class="column">
+          <div class="border">
+            <h3>Update</h3>
+            <span id="app-version">Current app version: </span><br>
+            <button id="update-button" type="button">Check for updates..</button>
+            <br><br>
+            <config-checkbox confID="checkForUpdatesOnStartup" label="Check for updates on startup"></config-checkbox>
+
+            <hr>
+
+            <h3>Log files</h3>
+            <p>If you experience errors/crashes, send the logs to our discord server</p>
+            <open-folder-button path="logs" label="open log files folder"></open-folder-button>
+          </div>
+
+          <br>
+
+          <div class="border">
+            <h3>Clear conversation summaries</h3>
+            <p>This will delete the summaries of previous conversations of all characters</p>
+            <button type="button" id="clear-summaries">Clear Summaries</button>
+            <br><br>
+            <open-folder-button path="conversation_summaries" label="Open conversation summaries folder"></open-folder-button>
+          </div>
+        </div>
+        <div class="column">
+          <div class ="border">
+            <div class="row">
+              <div class="column">
+                <h3>Discord</h3>
+                <a href="https://discord.gg/5nuE54GFgr" target="_blank"><img src="../assets/discord-icon.jpg" width="50%" height="50%"></a>
+
+            
+              </div>
+              <div class="column">
+                <h3>Patreon</h3>
+                <a href="https://www.patreon.com/VoicesoftheCourt" target="_blank"><img src="../assets/patreon-icon.png" width="50%" height="50%"></a>
+              </div>
+            </div>
+            <row> 
+              <hr>
+              <h3>Top Contributors this month:</h3>
+              <ul>
+                <li>ENFP</li>
+              </ul> 
+            </row>
+          </div>
+        </div>
+      </div>  
+
+    </div>
+    
+   
+    <script>require("../../dist/configWindow/components/openFolderButton.js")</script>
+    <script>require("../../dist/configWindow/components/ConfigCheckbox.js")</script>
+    <script>require("../../dist/configWindow/systemRenderer.js")</script>
+    
+  </body>
+</html>
